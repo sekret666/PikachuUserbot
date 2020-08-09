@@ -59,4 +59,4 @@ RUN mkdir /root/ItzSjDude/bin/  && mkdir /root/ItzSjDude/pikabot/plugins/ && mkd
 WORKDIR /root/ItzSjDude
 RUN chmod +x /usr/local/bin/*
 RUN pip3 install -r requirements.txt
-CMD ["python3","-m","userbot"]
+CMD ["python3","-m","pikabot"]
