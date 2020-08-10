@@ -1,2 +1,2 @@
-telethon>=1.15
+git+https://github.com/ItzSjDude/Telethon
 -r requirements-startup.txt
