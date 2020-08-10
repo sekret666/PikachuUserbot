@@ -21,7 +21,7 @@
  
 **3.Fill up required fields like Appid,Api hash, String Sesson , Bot token nd Bot username**
 
-**4.Hola! Click on deploy now nd wait for 5-10mins**
+**4.Hola! Click on deploy now nd wait for 20-30mins**
 
 ### The Normal Way
 
