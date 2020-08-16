@@ -28,6 +28,16 @@
       "value": "",
       "required": false
     },
+    "AUTO_BIO": {
+      "description": "Enter Bio Caption here.",
+      "value": "Life Goes On",
+      "required": false
+    },
+    "AUTOPIC_COMMENT": {
+      "description": "Enter Autpic caption Here.",
+      "value": "#StayHomeStaysafe",
+      "required": false
+    },
     "ALIVE_NAME": {
       "description": "Fill your Full name or Username like @itzsjdude.",
       "value": ""
