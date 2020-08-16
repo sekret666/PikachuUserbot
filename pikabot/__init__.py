@@ -56,6 +56,7 @@ if bool(ENV):
     AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", "")
     AUTOPIC_FONT_COLOUR = os.environ.get("AUTOPIC_FONT_COLOUR", "")
     AUTOPIC_FONT = os.environ.get("AUTOPIC_FONT", "") 
+    AUTO_BIO = os.environ.get("AUTO_BIO", "")
     PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
     DB_URI = os.environ.get("DATABASE_URL", None)
