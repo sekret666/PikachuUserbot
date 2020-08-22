@@ -1,2 +1,2 @@
-git+https://github.com/ItzSjDude/Telethon
+Telethon
 -r requirements-startup.txt
