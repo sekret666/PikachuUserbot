@@ -1,1 +1,1 @@
-from pikabot.main_plugs import coreXtended
+from pikabot.main_plugs import _core
