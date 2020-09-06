@@ -33,7 +33,7 @@ async def alt():
             await bot3.start()
             LOGS.info("Session 3 Connected")
         except:
-            LOGS.info("String Session 2 expired. Please create new one")
+            LOGS.info("String Session 3 expired. Please create new one")
             quit(1)
     if bot4:
         try:
