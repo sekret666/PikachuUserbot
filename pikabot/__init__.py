@@ -3,23 +3,19 @@ from logging import basicConfig, getLogger, INFO, DEBUG ; from distutils.util im
 from pySmartDL import SmartDL
 from requests import get
 
-os.system("pip install --upgrade pip")
-if Var.STRING_SESSION:
-    session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
+bot2 = bot3 = bot4 = None
+if Var.STRING_SESSION:    
+    bot = TelegramClient(StringSession(Var.STRING_SESSION),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
-    session_name = "startup"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
-
-
-CMD_LIST = {}
-# for later purposes
-CMD_HELP = {}
-INT_PLUG = ""
-LOAD_PLUG = {}
+     quit(1)
+if Var.STR2:
+    bot2 = TelegramClient(StringSession(Var.STR2),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
+if Var.STR3:
+    bot3 = TelegramClient(StringSession(Var.STR3),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
+if Var.STR4:
+    bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
 
 ENV = os.environ.get("ENV", False)
-
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
@@ -126,11 +122,14 @@ for binary, path in binaries.items():
     os.chmod(path, 0o755)
 
 # Global Variables
+CMD_LIST = {}
+CMD_HELP = {}
+INT_PLUG = ""
+LOAD_PLUG = {}
 COUNT_MSG = 0
 USERS = {}
 COUNT_PM = {}
 LASTMSG = {}
-CMD_HELP = {}
 ISAFK = False
 AFKREASON = None
 
