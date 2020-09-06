@@ -1,1 +1,1 @@
-from pikabot.modules.cmds import *
+from pikabot.utils import *
