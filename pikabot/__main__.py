@@ -63,9 +63,8 @@ for name in files:
         load_module(shortname.replace(".py", ""))
 
 
-bx = await bot.get_me()
-ax = bx.first_name    
-LOGS.info(f"{ax}'s Pikabot activated successfully type {l}help or {l}alive in Saved Messages")
+   
+LOGS.info(f"{bot.me.first_name}'s Pikabot activated successfully type {l}help or {l}alive in Saved Messages")
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
