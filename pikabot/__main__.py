@@ -7,7 +7,7 @@ async def add_bot(bot_token):
     bot.axi = await bot2.get_me()
     bot.bxi = telethon.utils.get_peer_id(bot.axi)
     ax = bot.me.first_name
-
+    
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
@@ -17,7 +17,7 @@ else:
         bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
     else:
         bot.start()
-
+l= Var.CUSTOM_CMD
 async def alt():
     await bot.start()
     LOGS.info("Detecting nd Connecting to Sessions...")
