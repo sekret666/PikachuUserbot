@@ -55,6 +55,7 @@ import pikabot.carbonX
 LOGS.info("setting up carbon") 
 
 from pikabot.utils import load_module
+import glob
 path = 'plugins/*.py'
 files = glob.glob(path)
 for name in files:
