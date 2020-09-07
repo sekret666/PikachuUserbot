@@ -23,7 +23,7 @@ class BlackListFilters(BASE):
                     and self.trigger == other.trigger)
 
 
-BLF2.__table__.create(checkfirst=True)
+BlackListFilters.__table__.create(checkfirst=True)
 
 class BLF2(BASE):
     __tablename__ = "blst"
