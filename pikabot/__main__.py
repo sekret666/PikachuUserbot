@@ -6,8 +6,6 @@ async def add_bot(bot_token):
     bot.uid = telethon.utils.get_peer_id(bot.me)
     bot.axi = await bot2.get_me()
     bot.bxi = telethon.utils.get_peer_id(bot.axi)
-    ax = bot.me.first_name
-    
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
@@ -65,6 +63,8 @@ for name in files:
         load_module(shortname.replace(".py", ""))
 
 
+bx = await bot.get_me()
+ax = bx.first_name    
 LOGS.info(f"{ax}'s Pikabot activated successfully type {l}help or {l}alive in Saved Messages")
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
