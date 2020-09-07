@@ -5,7 +5,9 @@ class Var(object):
     # 6 is a placeholder
     API_HASH = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
-    STRING_SESSION2 = os.environ.get("STRING_SESSION2", None)
+    STR2 = os.environ.get("STR2", None)
+    STR3 = os.environ.get("STR3", None)
+    STR4 = os.environ.get("STR4", None)
     DB_URI = os.environ.get("DATABASE_URL", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", None)
     CUSTOM_CMD = os.environ.get("CUSTOM_CMD", ".")
