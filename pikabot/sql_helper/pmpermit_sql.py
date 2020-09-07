@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String
-from userbot.plugins.sql_helper import SESSION, BASE
+from pikabot.sql_helper import SESSION, BASE
 
 
 class PMPermit(BASE):
@@ -14,6 +14,45 @@ class PMPermit(BASE):
 
 PMPermit.__table__.create(checkfirst=True)
 
+
+class PMPermit2(BASE):
+    __tablename__ = "pmpermit2"
+    chat_id = Column(String(14), primary_key=True)
+    reason = Column(String(127))
+
+    def __init__(self, chat_id, reason=""):
+        self.chat_id = chat_id
+        self.reason = reason
+
+
+PMPermit2.__table__.create(checkfirst=True)
+
+def is_client_approved(chat_id):
+    try:
+        return SESSION.query(PMPermit2).filter(PMPermit2.chat_id == str(chat_id)).one()
+    except:
+        return None
+    finally:
+        SESSION.close()
+
+
+def clientapprove(chat_id, reason):
+    adder = PMPermit2(str(chat_id), str(reason))
+    SESSION.add(adder)
+    SESSION.commit()
+
+
+def clientdisapprove(chat_id):
+    rem = SESSION.query(PMPermit2).get(str(chat_id))
+    if rem:
+        SESSION.delete(rem)
+        SESSION.commit()
+
+
+def get_approved_clients():
+    rem = SESSION.query(PMPermit2).all()
+    SESSION.close()
+    return rem
 
 def is_approved(chat_id):
     try:
