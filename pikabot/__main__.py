@@ -10,7 +10,7 @@ async def add_bot(bot_token):
         bot2_id = telethon.utils.get_peer_id(client2)
     if Var.STR3
         await bot3.start(bot_token)
-        client3 = await bot2.get_me()
+        client3 = await bot3.get_me()
         bot3_id = telethon.utils.get_peer_id(client3)
     if Var.STR4
         await bot4.start(bot_token)
