@@ -1,18 +1,18 @@
 import os, telethon, telethon.utils, asyncio, traceback ; from pikabot import * ; from sys import * ; from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from var import Client as clIent ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import * 
 async def add_bot(bot_token):
-    if Var.STRING_SESSION
+    if Var.STRING_SESSION:
         await bot.start(bot_token)
         bot.me = await bot.get_me() 
         bot.uid = telethon.utils.get_peer_id(bot.me)
-    if Var.STR2
+    if Var.STR2:
         await bot2.start(bot_token)
         client2 = await bot2.get_me()
         bot2_id = telethon.utils.get_peer_id(client2)
-    if Var.STR3
+    if Var.STR3:
         await bot3.start(bot_token)
         client3 = await bot3.get_me()
         bot3_id = telethon.utils.get_peer_id(client3)
-    if Var.STR4
+    if Var.STR4:
         await bot4.start(bot_token)
         client4 = await bot4.get_me()
         bot4_id = telethon.utils.get_peer_id(client4)
