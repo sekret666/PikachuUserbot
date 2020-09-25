@@ -6,16 +6,16 @@ async def add_bot(bot_token):
         bot.uid = telethon.utils.get_peer_id(bot.me)
     if Var.STR2:
         await bot2.start(bot_token)
-        client2 = await bot2.get_me()
-        bot2_id = telethon.utils.get_peer_id(client2)
+        bot2.me = await bot2.get_me()
+        bot2.uid = telethon.utils.get_peer_id(bot2.me)
     if Var.STR3:
         await bot3.start(bot_token)
-        client3 = await bot3.get_me()
-        bot3_id = telethon.utils.get_peer_id(client3)
+        bot3.me = await bot3.get_me()
+        bot3.uid = telethon.utils.get_peer_id(bot3.me)
     if Var.STR4:
         await bot4.start(bot_token)
-        client4 = await bot4.get_me()
-        bot4_id = telethon.utils.get_peer_id(client4)
+        bot4.me = await bot4.get_me()
+        bot4.uid = telethon.utils.get_peer_id(bot4.me)
     else:
        pass
 
