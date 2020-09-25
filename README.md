@@ -51,16 +51,16 @@ class Development(Var):
 ```
 
 
-### UniBorg Configuration
+### Borg Configuration
 
 
-The UniBorg Config is situated in `userbot/uniborgConfig.py`.
+The Borg Config is situated in `userbot/borgConfig.py`.
 
 **Heroku Configuration**
 Simply just leave the Config as it is.
 
 **Local Configuration**
-Fortunately there are no Mandatory vars for the UniBorg Support Config.
+Fortunately there are no Mandatory vars for the Borg Support Config.
 
 ## Mandatory Vars
 
