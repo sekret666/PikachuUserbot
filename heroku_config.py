@@ -1,4 +1,6 @@
+
 import os
+from telethon.tl.types import ChatBannedRights
 client1 = "@Errorx404x"
 class Var(object):
     APP_ID = int(os.environ.get("APP_ID", 6))
