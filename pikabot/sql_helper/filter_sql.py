@@ -129,7 +129,7 @@ def adf(chat_id, keyword, reply, snip_type, media_id, media_access_hash, media_f
         adder.media_access_hash = media_access_hash
         adder.media_file_reference = media_file_reference
     else:
-        adder = Filters(chat_id, keyword, reply, snip_type, media_id,
+        adder = Filterx(chat_id, keyword, reply, snip_type, media_id,
                         media_access_hash, media_file_reference)
     SESSION.add(adder)
     SESSION.commit()
