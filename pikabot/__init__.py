@@ -1,4 +1,4 @@
-import os ; import sys ; from pymongo import MongoClient ; from telethon.sessions import StringSession ; from telethon import TelegramClient ; from telethon.tl.types import PeerChannel ; from var import Var ; import time ; UpTime = time.time()
+import os ; import sys ; from pymongo import MongoClient ; from telethon.sessions import StringSession ; from telethon import TelegramClient ; from telethon.tl.types import PeerChannel ; from var import Var ; import time ; UpTime = time.time() ; from git import Repo ; Repo.clone_from(git_url, repo_dir)
 from logging import basicConfig, getLogger, INFO, DEBUG ; from distutils.util import strtobool as sb ; import asyncio ; import pylast 
 from pySmartDL import SmartDL
 from requests import get
