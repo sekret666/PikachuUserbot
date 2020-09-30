@@ -2,6 +2,7 @@ import os ; import sys ; from pymongo import MongoClient ; from telethon.session
 from logging import basicConfig, getLogger, INFO, DEBUG ; from distutils.util import strtobool as sb ; import asyncio ; import pylast 
 from pySmartDL import SmartDL
 from requests import get
+import shutil
 
 bot2 = bot3 = bot4 = None
 if Var.STRING_SESSION:    
@@ -15,6 +16,9 @@ if Var.STR3:
 if Var.STR4:
     bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
 
+shutil.move('./PikabotPlugins/plugins', './')
+os.system('rm -rf ./PikabotPlugins')
+LOGS.info('Optimized Plugins')
 ENV = os.environ.get("ENV", False)
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
