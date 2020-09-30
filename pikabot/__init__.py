@@ -16,8 +16,8 @@ if Var.STR3:
 if Var.STR4:
     bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
 
-shutil.move('./drive/PikaBotPlugins/plugins', './')
-os.system('rm -rf ./drive/PikabotPlugins')
+shutil.move('./drive/plugins', './')
+os.system('rm -rf ./drive')
 LOGS.info('Optimized Plugins')
 ENV = os.environ.get("ENV", False)
 if bool(ENV):
