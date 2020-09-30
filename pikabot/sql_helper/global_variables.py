@@ -11,18 +11,6 @@ LOL = "｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥•°\n╱┏┓╱
 
 git_url="https://github.com/ItzSjDude/PikaBotPlugins"
 repo_dir="./"
-LOGGER = Var.PRIVATE_GROUP_BOT_API_ID
-BLACKLIST = Var.UB_BLACK_LIST_CHAT
-SYNTAX = {}
-COUNT_MSG = 0
-USERS = {}
-COUNT_PM = {}
-LASTMSG = {}
-CMD_HELP = {}
-ISAFK = False
-AFKREASON = None
-BUILD = "PikaBot"
-MODULE = []
 
 
 
