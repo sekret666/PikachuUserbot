@@ -20,7 +20,7 @@
     },
     "TEMP_DOWNLOAD_DIRECTORY": {
       "description": "Where downloaded files will go.",
-      "value": "./userbot/DOWNLOADS/",
+      "value": "./Drive/",
       "required": false
     },
     "CUSTOM_PMPERMIT": {
@@ -65,12 +65,8 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
-    "PLUGIN_CHANNEL": {
-      "description": "Create a private Channel add rose  then type /id",
-      "value": ""
-    },
-    "PRIVATE_GROUP_ID": {
-      "description": "Create a private group add rose bot then type /id. Used for logging",
+    "BOTLOG_CHATID": {
+      "description": "Create a private group add rose  then type /id. Required for logging ",
       "value": ""
     },
     "STRING_SESSION": {
@@ -86,22 +82,12 @@
       "value": ""
     },
     "TG_BOT_TOKEN_BF_HER": {
-      "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the token of your bot. And Don't Forget To Turn of inline Mode on bot settings. Get it.",
+      "description": "Needed for inline buttons maker nd Helper plugin. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the token of your bot. And Don't Forget To Turn of inline Mode on bot settings. Get it.",
       "value": ""
     },
     "SUDO_USERS": {
       "description": "Makes your acc and bot stable",
       "value": "779890498",
-      "required": false
-    },
-    "CHROME_BIN": {
-      "description": "For Carbon.py. Leave as it is. ",
-      "value": "/app/.apt/usr/bin/google-chrome",
-      "required": false
-    },
-    "CHROME_DRIVER": {
-      "description": "For Carbon.py. Leave as it is. ",
-      "value": "/app/.chromedriver/bin/chromedriver",
       "required": false
     },
     "TG_BOT_USER_NAME_BF_HER": {
