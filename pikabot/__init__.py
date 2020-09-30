@@ -18,7 +18,7 @@ if Var.STR4:
 
 shutil.move('./drive/plugins', './')
 os.system('rm -rf ./drive')
-LOGS.info('Optimized Plugins')
+print('Optimized Plugins')
 ENV = os.environ.get("ENV", False)
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
