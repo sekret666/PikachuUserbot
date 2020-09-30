@@ -4,7 +4,7 @@
 
 from heroku_config import Var
 import asyncio
-from userbot import ALIVE_NAME, AUTOPIC_FONT_COLOUR, AUTOPIC_FONT, AUTOPIC_COMMENT
+from pikabot import ALIVE_NAME, AUTOPIC_FONT_COLOUR, AUTOPIC_FONT, AUTOPIC_COMMENT
 	
 AUTO_PIC_FONT = str(AUTOPIC_FONT) if AUTOPIC_FONT else "DejaVuSansMono.ttf"
 FONT_FILE_TO_USE = f"fonts/{AUTO_PIC_FONT}"
@@ -18,7 +18,7 @@ LOL = "｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥•°\n╱┏┓╱
 
 
 git_url="https://github.com/ItzSjDude/PikaBotPlugins"
-repo_dir="./pikabot"
+repo_dir="./"
 LOGGER = Var.PRIVATE_GROUP_BOT_API_ID
 BLACKLIST = Var.UB_BLACK_LIST_CHAT
 SYNTAX = {}
