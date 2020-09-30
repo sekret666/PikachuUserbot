@@ -1,4 +1,4 @@
-import os ; import sys ; from pymongo import MongoClient ; from telethon.sessions import StringSession ; from telethon import TelegramClient ; from telethon.tl.types import PeerChannel ; from var import Var ; import time ; UpTime = time.time() ; from .sql_helper.global_variables import * ; from git import Repo ; Repo.clone_from(git_url, repo_dir)
+import os ; import sys ; from pymongo import MongoClient ; from telethon.sessions import StringSession ; from telethon import TelegramClient ; from telethon.tl.types import PeerChannel ; from var import Var ; import time ; UpTime = time.time() ; from .sql_helper.global_variables import * ;os.mkdir('./drive') ; from git import Repo ; Repo.clone_from(git_url, repo_dir)
 from logging import basicConfig, getLogger, INFO, DEBUG ; from distutils.util import strtobool as sb ; import asyncio ; import pylast 
 from pySmartDL import SmartDL
 from requests import get
@@ -16,8 +16,8 @@ if Var.STR3:
 if Var.STR4:
     bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
 
-shutil.move('./PikabotPlugins/plugins', './')
-os.system('rm -rf ./PikabotPlugins')
+shutil.move('./drive/PikabotPlugins/plugins', './')
+os.system('rm -rf ./drive/PikabotPlugins')
 LOGS.info('Optimized Plugins')
 ENV = os.environ.get("ENV", False)
 if bool(ENV):
