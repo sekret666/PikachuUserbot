@@ -10,7 +10,7 @@ LOL = "｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥•°\n╱┏┓╱
 
 
 git_url="https://github.com/ItzSjDude/PikaBotPlugins"
-repo_dir="./"
+repo_dir="./drive"
 
 
 
