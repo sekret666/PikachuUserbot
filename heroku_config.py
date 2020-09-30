@@ -12,16 +12,17 @@ class Var(object):
     STR4 = os.environ.get("STR4", None)
     DB_URI = os.environ.get("DATABASE_URL", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", None)
+    TMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", None)
     CUSTOM_CMD = os.environ.get("CUSTOM_CMD", ".")
     LOGGER = True
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     # Here for later purposes
-    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "1097131648").split())
-    WHITELIST_USERS = set(int(x) for x in os.environ.get("WHITELIST_USERS", "832241419").split())
+    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "779890498").split())
+    WHITELIST_USERS = set(int(x) for x in os.environ.get("WHITELIST_USERS", "779890498").split())
     BLACKLIST_USERS = set(int(x) for x in os.environ.get("BLACKLIST_USERS", "").split())
-    DEVLOPERS = set(int(x) for x in os.environ.get("DEVLOPERS", "719195224").split())
-    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "813878981").split())
+    DEVLOPERS = set(int(x) for x in os.environ.get("DEVLOPERS", "779890498").split())
+    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "779890498").split())
     SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "").split())
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
     LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
@@ -56,9 +57,9 @@ class Var(object):
     # Get your own ACCESS_KEY from http://api.screenshotlayer.com/api/capture
     SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", None)
     # Send .get_id in any group to fill this value.
-    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID", -100123456789))
+    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("BOTLOG_CHATID", None))
     # Send .get_id in any channel to fill this value. ReQuired for @Manuel15 inspiration to work!
-    PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", -100123456789))
+    PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID", None))
     # This is required for the plugins involving the file system.
     TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
     # This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html
@@ -69,7 +70,7 @@ class Var(object):
     # Get a Free API Key from OCR.Space
     OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
     # Send .get_id in any group with all your administration bots (added)
-    G_BAN_LOGGER_GROUP = int(os.environ.get("G_BAN_LOGGER_GROUP", -100123456789))
+    G_BAN_LOGGER_GROUP = int(os.environ.get("BOTLOG_CHATID", None))
     # TG API limit. An album can have atmost 10 media!
     GOOGLE_SEARCH_COUNT_LIMIT = int(os.environ.get("GOOGLE_SEARCH_COUNT_LIMIT", 9))
     TG_GLOBAL_ALBUM_LIMIT = int(os.environ.get("TG_GLOBAL_ALBUM_LIMIT", 9))
@@ -108,7 +109,7 @@ class Var(object):
     # set to True if you want to log PMs to your PM_LOGGR_BOT_API_ID
     NC_LOG_P_M_S = bool(os.environ.get("NC_LOG_P_M_S", False))
     # send .get_id in any channel to forward all your NEW PMs to this group
-    PM_LOGGR_BOT_API_ID = os.environ.get("PM_LOGGR_BOT_API_ID", None)
+    PM_LOGGR_BOT_API_ID = os.environ.get("BOTLOG_CHATID", None)
     if PM_LOGGR_BOT_API_ID:
         PM_LOGGR_BOT_API_ID = int(PM_LOGGR_BOT_API_ID)
     # For Databases
