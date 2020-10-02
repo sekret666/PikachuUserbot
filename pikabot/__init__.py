@@ -29,7 +29,8 @@ if bool(ENV):
             level=DEBUG,
         )
     else:
-        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        basicConfig (
+            format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
             level=info,
         )
     LOGS = getLogger(__name__)
