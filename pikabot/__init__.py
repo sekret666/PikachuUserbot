@@ -29,8 +29,9 @@ if bool(ENV):
             level=DEBUG,
         )
     else:
-        basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-                    level=INFO)
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+            level=info,
+        )
     LOGS = getLogger(__name__)
 
     # Check if the config was edited by using the already used variable.
