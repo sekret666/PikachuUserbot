@@ -31,7 +31,7 @@ if bool(ENV):
     else:
         basicConfig (
             format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-            level=info,
+            level=INFO,
         )
     LOGS = getLogger(__name__)
 
