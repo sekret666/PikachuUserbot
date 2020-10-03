@@ -1,1 +1,1 @@
-from pikabot.main_plugs import _core
+from pikabot.main_plugs._core import *
