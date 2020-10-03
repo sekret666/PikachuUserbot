@@ -29,10 +29,10 @@ if bool(ENV):
             level=DEBUG,
         )
     else:
-        basicConfig (
+        basicConfig(
             format="◆━%(name)s━◆ ◤%(levelname)s◢ ║%(message)s║",
             level=INFO,
-        
+        )
     LOGS = getLogger(__name__)
 
     # Check if the config was edited by using the already used variable.
