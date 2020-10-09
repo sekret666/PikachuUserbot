@@ -59,12 +59,6 @@ async def alt():
        mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(clIent, ids=mxo), "pikabot/main_plugs")
 bot.loop.run_until_complete(alt())
 
-import pikabot._core
-LOGS.info("Initialising Core")
-
-import pikabot.carbonX   
-LOGS.info("setting up carbon") 
-
 from pikabot.utils import load_module
 import glob
 path = 'plugins/*.py'
@@ -75,6 +69,21 @@ for name in files:
         shortname = path1.stem
         load_module(shortname.replace(".py", ""))
 
+
+#SocialDistancing
+
+
+import pikabot._core
+LOGS.info("Initialising Core")
+
+
+#SocialDistancing
+
+
+import pikabot.carbonX   
+LOGS.info("setting up carbon") 
+
+#SocialDistancing
 
    
 LOGS.info(f"{bot.me.first_name}'s Pikabot activated successfully type {l}help or {l}alive in Saved Messages")
