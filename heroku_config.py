@@ -1,6 +1,5 @@
 
 import os
-from pikabot import LOGS
 from telethon.tl.types import ChatBannedRights
 client1 = "@Errorx404x"
 class Var(object):
@@ -47,7 +46,7 @@ class Var(object):
         try:
             BOTLOG_CHATID = int(BOTLOG_CHATID)
         except ValueError:
-            LOGS.error("Invalid BOTLOG_CHATID, Make sure your ID is starts with -100 and make sure that it is only numbers.")
+            Print("Invalid BOTLOG_CHATID, Make sure your ID is starts with -100 and make sure that it is only numbers")
         
     #+++++++++++++++++++++++++++|BORG_CONFIG|+++++++++++++++++++++++++++#
         
