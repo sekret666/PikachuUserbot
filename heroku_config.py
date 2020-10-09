@@ -1,5 +1,6 @@
 
 import os
+from pikabot import LOGS
 from telethon.tl.types import ChatBannedRights
 client1 = "@Errorx404x"
 class Var(object):
@@ -41,12 +42,12 @@ class Var(object):
         t_file = open(TEMP_DOWNLOAD_DIRECTORY+"auth_token.txt","w")
         t_file.write(AUTH_TOKEN_DATA)
         t_file.close()
-    PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", None)
-    if PRIVATE_GROUP_ID != None:
+    BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
+    if BOTLOG_CHATID != None:
         try:
-            PRIVATE_GROUP_ID = int(PRIVATE_GROUP_ID)
+            BOTLOG_CHATID = int(BOTLOG_CHATID)
         except ValueError:
-            raise ValueError("Invalid Private Group ID. Make sure your ID is starts with -100 and make sure that it is only numbers.")
+            LOGS.error("Invalid BOTLOG_CHATID, Make sure your ID is starts with -100 and make sure that it is only numbers.")
         
     #+++++++++++++++++++++++++++|BORG_CONFIG|+++++++++++++++++++++++++++#
         
