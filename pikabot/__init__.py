@@ -12,7 +12,7 @@ ENV = os.environ.get("ENV", False)
 bool(ENV)
 basicConfig(format="◆━%(name)s━◆ ◤%(levelname)s◢ ║%(message)s║",level=INFO,)
 LOGS = getLogger(__name__)
-logging.getLogger("plugins").setLevel(logging.Exception)
+logging.getLogger("plugins").setLevel(logging.ERROR)
 logging.getLogger("telethon.network.mtprotosender").setLevel(logging.ERROR)
 BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
 try:
