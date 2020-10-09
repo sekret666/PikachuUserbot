@@ -46,7 +46,7 @@ class Var(object):
         try:
             BOTLOG_CHATID = int(BOTLOG_CHATID)
         except ValueError:
-            Print("Invalid BOTLOG_CHATID, Make sure your ID is starts with -100 and make sure that it is only numbers")
+            print("Invalid BOTLOG_CHATID, Make sure your ID is starts with -100 and make sure that it is only numbers")
         
     #+++++++++++++++++++++++++++|BORG_CONFIG|+++++++++++++++++++++++++++#
         
