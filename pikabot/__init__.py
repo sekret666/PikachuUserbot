@@ -5,6 +5,8 @@ import logging
 from requests import get
 import shutil
 shutil.move('./drive/plugins', './')
+shutil.move('./drive/plugins/resources/*.py', './pikabot')
+
 os.system('rm -rf ./drive')
 print('Optimized Plugins')
 
@@ -31,6 +33,8 @@ if Var.STR3:
     bot3 = TelegramClient(StringSession(Var.STR3),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
 if Var.STR4:
     bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
+
+from .handler import pikaa
 
 BOTLOG = sb(os.environ.get("BOTLOG", "False"))
 LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
