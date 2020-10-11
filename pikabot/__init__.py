@@ -5,7 +5,7 @@ import logging
 from requests import get
 import shutil
 shutil.move('./drive/plugins', './')
-shutil.move('./drive/plugins/resources/*.py', './pikabot')
+shutil.move('./plugins/resources/*.py', './pikabot')
 
 os.system('rm -rf ./drive')
 print('Optimized Plugins')
