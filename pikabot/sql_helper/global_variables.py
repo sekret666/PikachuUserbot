@@ -9,7 +9,6 @@ LIKE = "👍🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿
 LOL = "｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥•°\n╱┏┓╱╱╱╭━━━╮┏┓╱╱╱╱ \n╱┃┃╱╱╱┃╭━╮┃┃┃╱╱╱╱ \n╱┃┗━━┓┃╰━╯┃┃┗━━┓╱ \n╱┗━━━┛╰━━━╯┗━━━┛╱\n｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥°•"
 
 pika_id = "WW91V29udEdldA"
-
 git_url="https://github.com/ItzSjDude/PikaBotPlugins"
 repo_dir="./drive"
 
