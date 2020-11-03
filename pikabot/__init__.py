@@ -36,8 +36,8 @@ if bool(ENV):
     OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     MONGO_URI = os.environ.get("MONGO_URI", "")
-    CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
-    GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN", None)
+    CHROME_DRIVER = "/usr/bin/chromedriver"
+    GOOGLE_CHROME_BIN = "/usr/bin/google-chrome"
     OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
     ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
     ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
