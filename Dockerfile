@@ -52,7 +52,7 @@ RUN pip3 install --upgrade pip setuptools
 RUN if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi 
 RUN if [ ! -e /usr/bin/python ]; then ln -sf /usr/bin/python3 /usr/bin/python; fi 
 RUN rm -r /root/.cache
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm -rf google-chrome-stable_current_amd64.deb
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm -rf google-chrome-stable_current_amd64.deb && wget https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip
 RUN git clone https://github.com/ItzSjDude/PikachuUserbot /root/ItzSjDude
 RUN mkdir /root/ItzSjDude/bin/  && mkdir root/ItzSjDude/pikabot/main_plugs/
 WORKDIR /root/ItzSjDude
