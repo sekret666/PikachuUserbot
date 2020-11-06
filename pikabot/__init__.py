@@ -2,7 +2,7 @@ import os; import sys; from telethon.sessions import StringSession; from teletho
 print('Optimized Plugins')
 
 #Global Variables
-CMD_LIST = {};CMD_HELP = {};INT_PLUG = "";LOAD_PLUG = {};COUNT_MSG = 0;USERS = {};COUNT_PM = {};LASTMSG = {};ISAFK = False;AFKREASON = None
+CMD_LIST = {};Pika_Cmd = {};INT_PLUG = "";LOAD_PLUG = {};COUNT_MSG = 0;USERS = {};COUNT_PM = {};LASTMSG = {};ISAFK = False;AFKREASON = None
 
 ENV = os.environ.get("ENV", False)
 if bool(ENV):
