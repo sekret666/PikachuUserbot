@@ -59,7 +59,7 @@ apt-get install -y \
     policykit-1
  
 pip3 install --upgrade pip setuptools 
-git clone -b origin/Beta https://github.com/ItzSjDude/PikachuUserbot ./
+git clone https://github.com/ItzSjDude/PikachuUserbot ./
 mkdir bin && mkdir pikabot/main_plugs
 pip3 install -r requirements.txt 
 
