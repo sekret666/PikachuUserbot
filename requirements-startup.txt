@@ -57,3 +57,4 @@ wheel
 cairosvg
 lottie
 glitch_this
+pygments
