@@ -57,4 +57,3 @@ wheel
 cairosvg
 lottie
 glitch_this
-pymediainfo
