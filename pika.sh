@@ -57,7 +57,9 @@ apt-get install -y --no-install-recommends \
     libfreetype6-dev \
     procps \
     policykit-1
- 
+
+apt autoremove
+
 pip3 install --upgrade pip setuptools 
 git clone https://github.com/ItzSjDude/PikachuUserbot ./
 mkdir bin && mkdir pikabot/main_plugs
