@@ -12,9 +12,9 @@ echo '
 export TZ=Asia/Kolkata
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-apt-get update 
-
-apt-get install -y \
+apt-get update
+apt-get upgrade -y
+apt-get install -y --no-install-recommends \
     coreutils \
     bash \
     nodejs \
