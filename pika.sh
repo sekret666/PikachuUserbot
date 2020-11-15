@@ -9,10 +9,10 @@ echo '
 ┃┏┫┃━┫╋┗┫╋┃╋┃┏┫
 ┗┛┗┻┻┻━━┻━┻━┻━┛
 '
+export ARG DEBIAN_FRONTEND=noninteractive
 export TZ=Asia/Kolkata
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-apt-get upgrade -y
+apt-get update && apt upgrade -y 
 apt-get install -y --no-install-recommends \
     coreutils \
     bash \
@@ -57,7 +57,7 @@ apt-get install -y --no-install-recommends \
     procps \
     policykit-1
 
-apt-get autoremove --purge -y
+apt-get autoremove --purge
 
 pip3 install --upgrade pip setuptools 
 git clone https://github.com/ItzSjDude/PikachuUserbot ./
