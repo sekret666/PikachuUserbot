@@ -12,7 +12,6 @@ echo '
 export TZ=Asia/Kolkata
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-apt-get update
 apt-get upgrade -y
 apt-get install -y --no-install-recommends \
     coreutils \
@@ -58,7 +57,7 @@ apt-get install -y --no-install-recommends \
     procps \
     policykit-1
 
-apt-get autoremove --purge
+apt-get autoremove --purge -y
 
 pip3 install --upgrade pip setuptools 
 git clone https://github.com/ItzSjDude/PikachuUserbot ./
