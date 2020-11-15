@@ -56,8 +56,8 @@ apt-get install -y --no-install-recommends \
     megatools \
     libfreetype6-dev \
     procps \
-    policykit-1
-
+    policykit-1\
+    unzip
 apt autoremove --yes
 
 pip3 install --upgrade pip setuptools 
