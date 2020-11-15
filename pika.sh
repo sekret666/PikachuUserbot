@@ -57,7 +57,7 @@ apt-get install -y --no-install-recommends \
     procps \
     policykit-1
 
-apt-get autoremove --purge
+apt autoremove
 
 pip3 install --upgrade pip setuptools 
 git clone https://github.com/ItzSjDude/PikachuUserbot ./
