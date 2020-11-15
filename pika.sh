@@ -63,6 +63,8 @@ apt autoremove --yes
 pip3 install --upgrade pip setuptools 
 git clone https://github.com/ItzSjDude/PikachuUserbot ./
 mkdir bin && mkdir pikabot/main_plugs
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb
+wget https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64
 pip3 install -r requirements.txt 
 
 echo '
