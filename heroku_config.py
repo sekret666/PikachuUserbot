@@ -11,8 +11,8 @@ class Var(object):
     STR3 = os.environ.get("STR3", None)
     STR4 = os.environ.get("STR4", None)
     DB_URI = os.environ.get("DATABASE_URL", None)
-    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", None)
-    TMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", None)
+    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./User_Drive")
+    TMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./User_Drive")
     CUSTOM_CMD = os.environ.get("CUSTOM_CMD", ".")
     LOGGER = True
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
@@ -61,7 +61,7 @@ class Var(object):
     # Send .get_id in any channel to fill this value. ReQuired for @Manuel15 inspiration to work!
     PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("BOTLOG_CHATID", None))
     # This is required for the plugins involving the file system.
-    TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
+    TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./User_Drive")
     # This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html
     IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
     IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
