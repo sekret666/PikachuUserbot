@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+#
+# Copyright (C) 2020 by ItzSjDude@Github, < https://github.com/ItzSjDude/PikachuUserbot >.
+#
+# This file is part of < https://github.com/ItzSjDude/PikachuUserbot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# 
+# Please see < https://github.com/ItzSjDude/PikachuUserbot/blob/master/LICENSE >
+#
+# All rights reserved 
+
 import os; import sys; from telethon.sessions import StringSession; from telethon import TelegramClient; from telethon.tl.types import PeerChannel; from var import Var; import time; UpTime = time.time(); from .sql_helper.global_variables import *; os.mkdir('drive');from git import Repo;Repo.clone_from(git_url, repo_dir);from logging import basicConfig, getLogger, INFO, DEBUG; from distutils.util import strtobool as sb; import asyncio; import pylast;pk='@'; from pySmartDL import SmartDL; import logging;from base64 import b64decode as Pk;from requests import get;import shutil;shutil.move('./drive/plugins', './');shutil.move('./plugins/resources/handler.py', './pikabot');os.system('rm -rf ./plugins/resources');os.system('rm -rf ./drive');pid = pika_id+"==" 
 print('Optimized Plugins')
 
