@@ -36,7 +36,7 @@
       "value": ""
     },
     "BOTLOG_CHATID": {
-      "description": "Create a private group add rose  then type /id. Required for logging ",
+      "description": "Create a private group add rose  then type /id. Required for logging [Make sure your ID is starts with -100 and make sure that it is only numbers] ",
       "value": ""
     },
     "STRING_SESSION": {
@@ -61,7 +61,7 @@
       "required": false
     },
     "TG_BOT_USER_NAME_BF_HER": {
-      "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the username of your bot",
+      "description": "Needed for helper/ Session Generation. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the username of your bot",
       "value": ""
     },
     "TZ": {
