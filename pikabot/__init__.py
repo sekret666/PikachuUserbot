@@ -9,7 +9,7 @@
 #
 # All rights reserved 
 
-import os; import sys; from telethon.sessions import StringSession; from telethon import TelegramClient; from telethon.tl.types import PeerChannel; from var import Var; import time; UpTime = time.time(); from .sql_helper.global_variables import *; os.mkdir('drive');from git import Repo;Repo.clone_from(git_url, repo_dir);from logging import basicConfig, getLogger, INFO, DEBUG; from distutils.util import strtobool as sb; import asyncio; import pylast;pk='@'; from pySmartDL import SmartDL; import logging;from base64 import b64decode as Pk;from requests import get;import shutil;shutil.move('./drive/plugins', './');shutil.move('./plugins/resources/handler.py', './pikabot');os.system('rm -rf ./plugins/resources');os.system('rm -rf ./drive');pid = pika_id+"==" 
+import os; import sys; from telethon.sessions import StringSession; from telethon import TelegramClient; from telethon.tl.types import PeerChannel; from var import Var; import time; UpTime = time.time(); from .sql_helper.global_variables import *;from logging import basicConfig, getLogger, INFO, DEBUG; from distutils.util import strtobool as sb; import asyncio; import pylast;pk='@'; from pySmartDL import SmartDL; import logging;from base64 import b64decode as Pk;from requests import get;import shutil;pid = pika_id+"==" 
 print('Optimized Plugins')
 
 #Global Variables
@@ -77,19 +77,21 @@ if bool(ENV):
     LASTFM_API = os.environ.get("LASTFM_API", None)
     LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
 else:    
-    PLACEHOLDER = None
+    pass
 
-bot2 = bot3 = bot4 = None
-if Var.STRING_SESSION:    
-    bot = TelegramClient(StringSession(Var.STRING_SESSION),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
-if Var.STR2:
-    bot2 = TelegramClient(StringSession(Var.STR2),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
-if Var.STR3:
-    bot3 = TelegramClient(StringSession(Var.STR3),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
-if Var.STR4:
-    bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
-
-
-
-
-
+bot= bot2 = bot3 = bot4 = None
+BF_BOT=Var.TG_BOT_TOKEN_BF_HER
+BF_BOTNAME=Var.TG_BOT_USER_NAME_BF_HER
+try:
+   if Var.STR1:    
+       bot = TelegramClient(StringSession(Var.STRING_SESSION),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
+   if Var.STR2:
+       bot2 = TelegramClient(StringSession(Var.STR2),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
+   if Var.STR3:
+       bot3 = TelegramClient(StringSession(Var.STR3),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
+   if Var.STR4:
+       bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
+   if BF_BOT:    
+       tgbot = TelegramClient("Tgbot", Var.APP_ID, Var.API_HASH).start(bot_token=BF_BOT)
+except:
+    pass
