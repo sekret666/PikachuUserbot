@@ -22,6 +22,7 @@
       "description": "Where downloaded files will go.",
       "value": "./Drive/",
       "required": false
+    },
     "ALIVE_NAME": {
       "description": "Fill your Full name or Username like @itzsjdude.",
       "value": ""
