@@ -58,7 +58,7 @@ else:
                 pikalog.info("_MULTICLIENT3_: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
                 await pika_login("STR4")
 
-        if Var.STRING_SESSION and bot is None:
+        if Var.STR1 and bot is None:
            try:
               await bot.start()
            except:
