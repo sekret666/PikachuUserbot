@@ -71,7 +71,7 @@ BF_BOT=Var.TG_BOT_TOKEN_BF_HER
 BF_BOTNAME=Var.TG_BOT_USER_NAME_BF_HER
 try:
    if Var.STR1:    
-       bot = TelegramClient(StringSession(Var.STRING_SESSION),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
+       bot = TelegramClient(StringSession(Var.STR1),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
    if Var.STR2:
        bot2 = TelegramClient(StringSession(Var.STR2),Var.APP_ID,Var.API_HASH,auto_reconnect=True)
    if Var.STR3:
