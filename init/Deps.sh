@@ -8,6 +8,8 @@
 # Please see < https://github.com/ItzSjDude/PikachuUserbot/blob/master/LICENSE >
 #
 # All rights reserved 
+#
+# © @ItzSjdude, Made for Pikabot
 
 _logo() {
     echo '
@@ -18,34 +20,31 @@ _logo() {
     '
 }
 
-_cleanup() {
+_CleanUp() {
     echo 'Cleaning up Pikabot'
-    rm -rf ./* && rm -rf ./.gitignore && rm -rf ./.git
+    rm -rf ./plugins && rm -rf ./* && rm -rf ./.gitignore && rm -rf ./.git
 } 
 
-_source() {
-    echo 'Getting Source Ready' 
-    git clone -b Beta https://github.com/ItzSjDude/PikachuUserbot ./
+_UpSource() {
+    echo 'Updating PikaBot With ItzSjDude/PikachuUserbot' 
+    git clone -b Beta https://github.com/ItzSjDude/PikachuUserbot ./ &> /dev/null
+    mkdir ./plugins
+    git clone https://github.com/ItzSjDude/PikaBotPlugins ./Temp &> /dev/null
+    cp ./Temp/plugins/*.py ./plugins && cp ./Temp/plugins/resources/*.py ./pikabot
+    rm -rf ./Temp
 }
 
-_upgradePip() {
+_UpPip() {
     echo '••• Updating Pip •••' 
     pip3 install -U pip &> /dev/null
     echo '••• Updated Pip •••'
 }
 
-_insReq() {
-    echo '••• Installing Requirements •••'
-    pip install -r requirements.txt &> /dev/null
-    echo '••• Installed Requirements •••'
-}
-
-start() {
+StartUp() {
     _logo
-    _cleanup
-    _source
-    _upgradePip
-    _insReq
+    _CleanUp
+    _UpSource
+    _UpPip
     mkdir ./pikabot/main_plugs
     python3 -m pikabot
 }
