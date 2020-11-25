@@ -9,7 +9,7 @@
 #
 # All rights reserved 
 
-import os, sys;from logging import basicConfig, getLogger, INFO, DEBUG
+import os, sys;from logging import basicConfig, getLogger, INFO, DEBUG;from distutils.util import strtobool as sb
 _debug = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
 if _debug:
