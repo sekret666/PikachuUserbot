@@ -36,20 +36,9 @@ class Var(object):
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", "root")
     UB_BLACK_LIST_CHAT = set(int(x) for x in os.environ.get("UB_BLACK_LIST_CHAT", "").split())
     AUTH_TOKEN_DATA = os.environ.get("AUTH_TOKEN_DATA", None)
-    if AUTH_TOKEN_DATA != None:
-        os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
-        t_file = open(TEMP_DOWNLOAD_DIRECTORY+"auth_token.txt","w")
-        t_file.write(AUTH_TOKEN_DATA)
-        t_file.close()
     BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
-    if BOTLOG_CHATID != None:
-        try:
-            BOTLOG_CHATID = int(BOTLOG_CHATID)
-        except ValueError:
-            print("Invalid BOTLOG_CHATID, Make sure your ID is starts with -100 and make sure that it is only numbers")
-        
-    #+++++++++++++++++++++++++++|BORG_CONFIG|+++++++++++++++++++++++++++#
-        
+
+    #+++++++++++++++++++++++++++|BORG_CONFIG|+++++++++++++++++++++++++++# 
     LOGGER = True
     # Get this value from my.telegram.org! Please do not steal
     LOCATION = os.environ.get("LOCATION", None)
