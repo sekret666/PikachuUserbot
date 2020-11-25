@@ -9,4 +9,4 @@
 #
 # All rights reserved 
 
-from pikabot.main_plugs import *
+from pikabot.Event_Handlers import pika_login 
