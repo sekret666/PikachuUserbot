@@ -9,7 +9,7 @@
 #
 # All rights reserved 
 
-import os; import sys; from telethon.sessions import StringSession; from telethon import TelegramClient; from telethon.tl.types import PeerChannel; from var import Var; import time; UpTime = time.time(); from .sql_helper.global_variables import *;from logging import basicConfig, getLogger, INFO, DEBUG; from distutils.util import strtobool as sb; import asyncio; import pylast;pk='@'; from pySmartDL import SmartDL; import logging;from base64 import b64decode as Pk;from requests import get;import shutil;pid = pika_id+"==" 
+import os; import sys; from telethon.sessions import StringSession; from telethon import TelegramClient; from telethon.tl.types import PeerChannel; from var import Var; from Event_Handlers.logit import *; import time; UpTime = time.time(); from .sql_helper.global_variables import *; from distutils.util import strtobool as sb; import asyncio; import pylast;pk='@'; from pySmartDL import SmartDL;from base64 import b64decode as Pk;from requests import get;import shutil;pid = pika_id+"==" 
 print('Optimized Plugins')
 
 #Global Variables
@@ -17,24 +17,11 @@ CMD_LIST = {};CMD_HELP = {};Pika_Cmd = {};INT_PLUG = "";LOAD_PLUG = {};COUNT_MSG
 
 ENV = os.environ.get("ENV", False)
 if bool(ENV):
-    CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
-
-    if CONSOLE_LOGGER_VERBOSE:
-        basicConfig(
-            format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-            level=DEBUG,
-       )
-        LOGS = getLogger(__name__)
-    else:
-        basicConfig(format="◆━%(name)s━◆ ◤%(levelname)s◢ ║%(message)s║",level=INFO,)
-        LOGS = getLogger(__name__)
-        logging.getLogger("telethon.statecache").setLevel(logging.ERROR)
-        logging.getLogger("telethon.network.mtprotosender").setLevel(logging.ERROR)
     BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
     try:
         BOTLOG_CHATID = int(BOTLOG_CHATID)
-    except:
-        pass
+    except ValueError:
+        pikalog.error("INVALID ID DETECED: Make sure Your I'd starts with -100")
     BOTLOG = sb(os.environ.get("BOTLOG", "False"))
     LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
     AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", "")
