@@ -9,7 +9,7 @@
 #
 # All rights reserved 
 
-from Event_Handlers import * 
+from . import * 
 
 async def pika_login(_PiKa_):
     _PikaBot_ = await TelegramClient(
