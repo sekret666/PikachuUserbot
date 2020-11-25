@@ -13,6 +13,13 @@ import asyncio,os,sys,heroku3; from telethon import TelegramClient, events, cust
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY);app = Heroku.app(Var.HEROKU_APP_NAME)
 from .logit import pikalog
+#----------------------------------Constants--------------------------------
+_phone_ ="**Login Assistent** For {}\n\nEnter your Phone no. On which u want @PikachuUserbot 😛\nIf Indian No. **+91xxxxxxxxxx** else use **Country Code**"
+_2vfa_ = "**Login Assistent** For {}\n\nSeems like u have **2-Step verification** On your Account. Enter Your Password"
+_verif_ = "**Login Assistent** For {}\n\nPlease enter the verification code that you receive from Telegram\n**if your code is** 06969 **then enter** 0 6 9 6 9."
+_code_ = "**Login Assistent** For {}\n\n**Invalid Code Received**. Please /start"
+_logged_ = "Login Assistent** For {}\n\n {}:LOGGED IN\n\nwait for 1Min n then Do `.pika`"
+#----------------------------------Constants--------------------------------
 
 def get_client(_Pika_):
     global a
