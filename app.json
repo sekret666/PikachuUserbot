@@ -39,10 +39,6 @@
       "description": "Create a private group add rose  then type /id. Required for logging [Make sure your ID is starts with -100 and make sure that it is only numbers] ",
       "value": ""
     },
-    "STRING_SESSION": {
-      "description": "Get this value from https://Userbot.itzsjdude.repl.run",
-      "value": ""
-    },
     "HEROKU_API_KEY": {
       "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API.Required for updater to work.",
       "value": ""
