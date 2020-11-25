@@ -9,7 +9,7 @@
 #
 # All rights reserved 
 
-import os; import sys; from telethon.sessions import StringSession; from telethon import TelegramClient; from telethon.tl.types import PeerChannel; from var import Var; from Event_Handlers.logit import *; import time; UpTime = time.time(); from .sql_helper.global_variables import *; from distutils.util import strtobool as sb; import asyncio; import pylast;pk='@'; from pySmartDL import SmartDL;from base64 import b64decode as Pk;from requests import get;import shutil;pid = pika_id+"==" 
+import os; import sys; from telethon.sessions import StringSession; from telethon import TelegramClient; from telethon.tl.types import PeerChannel; from var import Var; from pikabot.Event_Handlers.logit import *; import time; UpTime = time.time(); from .sql_helper.global_variables import *; from distutils.util import strtobool as sb; import asyncio; import pylast;pk='@'; from pySmartDL import SmartDL;from base64 import b64decode as Pk;from requests import get;import shutil;pid = pika_id+"==" 
 print('Optimized Plugins')
 
 #Global Variables
