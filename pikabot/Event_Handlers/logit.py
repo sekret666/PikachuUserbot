@@ -9,7 +9,7 @@
 #
 # All rights reserved 
 
-import os, sys;from logging import basicConfig, getLogger, INFO, DEBUG;from distutils.util import strtobool as sb
+import os, sys;from logging import basicConfig, getLogger, INFO, ERROR, DEBUG;from distutils.util import strtobool as sb
 _debug = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
 if _debug:
@@ -18,11 +18,11 @@ else:
   _level = INFO 
 
 basicConfig(format="◆━%(name)s━◆ ◉━%(levelname)s━◉  ⎝✧%(message)s✧⎠",level=_level,)
-getLogger("telethon.statecache").setLevel(logging.ERROR)
-getLogger("telethon.network.mtprotosender").setLevel(logging.ERROR)
-getLogger("telethon.statecache").setLevel(logging.ERROR)
-getLogger("telethon.client.users").setLevel(logging.ERROR)
-getLogger("telethon.client.downloads").setLevel(logging.ERROR)
-getLogger("telethon.client.telegrambaseclient").setLevel(logging.ERROR)
-getLogger("telethon.network.mtprotosender").setLevel(logging.ERROR)
+getLogger("telethon.statecache").setLevel(ERROR)
+getLogger("telethon.network.mtprotosender").setLevel(ERROR)
+getLogger("telethon.statecache").setLevel(ERROR)
+getLogger("telethon.client.users").setLevel(ERROR)
+getLogger("telethon.client.downloads").setLevel(ERROR)
+getLogger("telethon.client.telegrambaseclient").setLevel(ERROR)
+getLogger("telethon.network.mtprotosender").setLevel(ERROR)
 pikalog = LOGS = getLogger(__name__)
