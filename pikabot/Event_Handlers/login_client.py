@@ -24,6 +24,8 @@ async def pika_login(_PiKa_):
         pikalog.info(me.first_name)
         @_PikaBot_.on(events.NewMessage())
         async def handler(event):
+            if not event.is_private:
+                return 
             APP_ID = Var.APP_ID;API_HASH = Var.API_HASH
             Config=app.config()  
             async with event.client.conversation(event.chat_id) as conv:
