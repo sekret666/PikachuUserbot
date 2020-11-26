@@ -13,6 +13,7 @@ import os, telethon, telethon.utils, asyncio, traceback ; from sys import * ;fro
 
 if bot is None: 
     from pikabot.login import *
+    pikalog.info("**MAINCLIENT**: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
     _Pika_Loop_ = asyncio.get_event_loop()
     _Pika_Loop_.run_until_complete(pika_login("STRING_SESSION"))
 else:
