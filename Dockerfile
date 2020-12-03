@@ -8,7 +8,7 @@
 #
 # All rights reserved 
 
-FROM kalilinux/kali:latest
+FROM itzsjdude/pikabot:latest
 COPY pika.sh /tmp/pika.sh
 WORKDIR root/ItzSjDude
 RUN /tmp/pika.sh && chmod +x /usr/local/bin/* 
