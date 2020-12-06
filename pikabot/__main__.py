@@ -59,6 +59,11 @@ else:
                 pikalog.info("_MULTICLIENT3_: Started Login Assistent, Do /start at {}'s PM".format(BF_BOTNAME))
                 await pika_login("STR4")
 
+        if tgbot: 
+                await tgbot.start()
+                tgbot.me = await tgbot.get_me()
+                tgbot.uid = telethon.utils.get_peer_id(tgbot.me)
+ 
         if Var.STR1 and bot is None:
            try:
               await bot.start()
