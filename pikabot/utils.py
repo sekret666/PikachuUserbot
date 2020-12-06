@@ -9,6 +9,7 @@
 #
 # All rights reserved 
 
+import os 
 from functools import wraps
 TGBOT_USERS = set(int(x) for x in os.environ.get("BOT_USERS", "779890498").split())
 from pikabot.main_plugs.utils import *
