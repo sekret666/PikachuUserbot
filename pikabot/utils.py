@@ -56,3 +56,6 @@ def pikatgbot(pika=None):
         return wrapper
 
     return decorator
+
+async def pika_edit_msg(self, text):
+         return await self.edit(text)
