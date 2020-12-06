@@ -14,7 +14,7 @@ print('Optimized Plugins')
 
 #Global Variables
 CMD_LIST = {};CMD_HELP = {};Pika_Cmd = {};INT_PLUG = "";LOAD_PLUG = {};COUNT_MSG = 0;USERS = {};COUNT_PM = {};LASTMSG = {};ISAFK = False;AFKREASON = None
-
+pikalog = getLogger(__name__)
 ENV = os.environ.get("ENV", False)
 if bool(ENV):
     BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
