@@ -12,7 +12,7 @@
 import asyncio,os,sys,heroku3; from telethon import TelegramClient, events, custom; from telethon.sessions import StringSession; from telethon.errors.rpcerrorlist import *; from var import Var
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY);app = Heroku.app(Var.HEROKU_APP_NAME)
-from .logit import pikalog
+
 #----------------------------------Constants--------------------------------
 _phone_ ="**Login Assistent** For {}\n\nEnter your Phone no. On which u want @PikachuUserbot 😛\nIf Indian No. **+91xxxxxxxxxx** else use **Country Code**"
 _2vfa_ = "**Login Assistent** For {}\n\nSeems like u have **2-Step verification** On your Account. Enter Your Password"
