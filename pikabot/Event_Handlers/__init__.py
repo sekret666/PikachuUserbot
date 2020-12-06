@@ -10,7 +10,7 @@
 # All rights reserved 
 
 import asyncio,os,sys,heroku3; from telethon import TelegramClient, events, custom; from telethon.sessions import StringSession; from telethon.errors.rpcerrorlist import *; from var import Var
-
+from logging import getLogger; pikalog = getLogger("LOGIN_ASSISTENT")
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY);app = Heroku.app(Var.HEROKU_APP_NAME)
 
 #----------------------------------Constants--------------------------------
