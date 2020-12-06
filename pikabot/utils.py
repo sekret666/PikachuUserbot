@@ -57,5 +57,9 @@ def pikatgbot(pika=None):
 
     return decorator
 
-async def pika_edit_msg(self, text):
+async def pika_msg(self, text, _pika_=None):
+     if not _pika_:
          return await self.edit(text)
+     else:
+         return await self.reply(text)
+
