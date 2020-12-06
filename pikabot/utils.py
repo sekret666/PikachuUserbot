@@ -67,3 +67,9 @@ async def pika_msg(self, text, _pika_=None):
      else:
          return await self.reply(text)
 
+async def is_pikatg(_pika_=None):
+     _pika = await _pika_.client.get_me()
+     if _pika.id== tgbot.uid:
+           return True
+     else:
+           return False
