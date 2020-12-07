@@ -32,7 +32,7 @@ def approve(chat_id, pika_id, reason):
 
 
 def disapprove(chat_id, pika_id):
-    rem = SESSION.query(PMPermit).get(chat_id, pika_id)
+    rem = SESSION.query(PMPermit).get((str(chat_id), pika_id))
     if rem:
         SESSION.delete(rem)
         SESSION.commit()
