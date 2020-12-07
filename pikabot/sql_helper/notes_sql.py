@@ -5,96 +5,66 @@
 # Made by @ItzSjDude for Pikabot
 
 try:
-    from pikabot.sql_helper import SESSION, BASE
+    from . import SESSION, BASE
 except ImportError:
-    raise Exception("Hello!")
-from sqlalchemy import Column, String, UnicodeText, Boolean, Integer, distinct, func
-
+    raise AttributeError
+from sqlalchemy import Column, UnicodeText, Numeric, String
 
 class Notes(BASE):
     __tablename__ = "notes"
     chat_id = Column(String(14), primary_key=True)
     keyword = Column(UnicodeText, primary_key=True, nullable=False)
-    reply = Column(UnicodeText, nullable=False)
+    reply = Column(UnicodeText)
+    f_mesg_id = Column(Numeric)
+    client_id = Column(Numeric)
 
-    def __init__(self, chat_id, keyword, reply):
-        self.chat_id = str(chat_id)  # ensure string
+    def __init__(self, chat_id, keyword, reply, f_mesg_id, client_id):
+        self.chat_id = str(chat_id)
         self.keyword = keyword
         self.reply = reply
-
+        self.f_mesg_id = f_mesg_id
+        self.client_id = client_id
 
 Notes.__table__.create(checkfirst=True)
 
 
-def get_notes(chat_id):
+def get_note(chat_id, keyword, client_id):
     try:
-        return SESSION.query(Notes).filter(Notes.chat_id == str(chat_id)).all()
+        return SESSION.query(Notes).get((str(chat_id), keyword, client_id)
     finally:
         SESSION.close()
 
 
-def add_note(chat_id, keyword, reply):
-    adder = SESSION.query(Notes).get((str(chat_id), keyword))
-    if adder:
-        adder.reply = reply
-    else:
-        adder = Notes(str(chat_id), keyword, reply)
-    SESSION.add(adder)
-    SESSION.commit()
-
-
-def rm_note(chat_id, keyword):
-    note = SESSION.query(Notes).filter(Notes.chat_id == str(chat_id), Notes.keyword == keyword)
-    if note:
-        note.delete()
-        SESSION.commit()
-
-def rm_all_notes(chat_id):
-    notes = SESSION.query(Notes).filter(Notes.chat_id == str(chat_id))
-    if notes:
-        notes.delete()
-        SESSION.commit()
-
-class Notes2(BASE):
-    __tablename__ = "notes2"
-    chat_id = Column(String(14), primary_key=True)
-    keyword = Column(UnicodeText, primary_key=True, nullable=False)
-    reply = Column(UnicodeText, nullable=False)
-
-    def __init__(self, chat_id, keyword, reply):
-        self.chat_id = str(chat_id)  # ensure string
-        self.keyword = keyword
-        self.reply = reply
-
-
-Notes2.__table__.create(checkfirst=True)
-
-
-def get_notes2(chat_id):
+def get_notes(chat_id, client_id):
     try:
-        return SESSION.query(Notes2).filter(Notes2.chat_id == str(chat_id)).all()
+        return SESSION.query(Notes).filter(Notes.chat_id == str(chat_id), Notes.client_id==client_id).all()
     finally:
         SESSION.close()
 
 
-def add_note2(chat_id, keyword, reply):
-    adder = SESSION.query(Notes2).get((str(chat_id), keyword))
-    if adder:
-        adder.reply = reply
+def add_note(chat_id, keyword, reply, f_mesg_id, client_id):
+    to_check = get_note(chat_id, keyword, client_id)
+    if not to_check:
+        adder = Notes(str(chat_id), keyword, reply, f_mesg_id, client_id)
+        SESSION.add(adder)
+        SESSION.commit()
+        return True
     else:
-        adder = Notes2(str(chat_id), keyword, reply)
-    SESSION.add(adder)
-    SESSION.commit()
-
-
-def rm_note2(chat_id, keyword):
-    note = SESSION.query(Notes2).filter(Notes2.chat_id == str(chat_id), Notes2.keyword == keyword)
-    if note:
-        note.delete()
+        rem = SESSION.query(Notes).get((str(chat_id), keyword, client_id))
+        SESSION.delete(rem)
         SESSION.commit()
-
-def rm_all_notes2(chat_id):
-    notes = SESSION.query(Notes2).filter(Notes2.chat_id == str(chat_id))
-    if notes:
-        notes.delete()
+        adder = Notes(str(chat_id), keyword, reply, f_mesg_id, client_id)
+        SESSION.add(adder)
         SESSION.commit()
+        return False
+
+
+def rm_note(chat_id, keyword, client_id):
+    to_check = get_note(chat_id, keyword, client_id)
+    if not to_check:
+        return False
+    else:
+        rem = SESSION.query(Notes).get((str(chat_id), keyword, client_id))
+        SESSION.delete(rem)
+        SESSION.commit()
+        return True
