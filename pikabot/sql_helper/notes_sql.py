@@ -16,7 +16,7 @@ class Notes(BASE):
     keyword = Column(UnicodeText, primary_key=True, nullable=False)
     reply = Column(UnicodeText)
     f_mesg_id = Column(Numeric)
-    client_id = Column(Numeric)
+    client_id = Column(Numeric, primary_key=True)
 
     def __init__(self, chat_id, keyword, reply, f_mesg_id, client_id):
         self.chat_id = str(chat_id)
