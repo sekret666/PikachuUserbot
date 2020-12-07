@@ -25,8 +25,8 @@ class PMPermit(BASE):
 
 PMPermit.__table__.create(checkfirst=True)
 
-def approve(chat_id, reason, pika_id):
-    adder = PMPermit(str(chat_id), str(reason), pika_id)
+def approve(chat_id, pika_id, reason):
+    adder = PMPermit(str(chat_id), pika_id, str(reason))
     SESSION.add(adder)
     SESSION.commit()
 
