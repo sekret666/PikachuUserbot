@@ -31,6 +31,8 @@ Notes.__table__.create(checkfirst=True)
 def get_note(chat_id, keyword, client_id):
     try:
         return SESSION.query(Notes).get((str(chat_id), keyword, client_id)
+    except:
+        return None 
     finally:
         SESSION.close()
 
@@ -38,6 +40,8 @@ def get_note(chat_id, keyword, client_id):
 def get_notes(chat_id, client_id):
     try:
         return SESSION.query(Notes).filter(Notes.chat_id == str(chat_id), Notes.client_id==client_id).all()
+    except:
+        return None
     finally:
         SESSION.close()
 
