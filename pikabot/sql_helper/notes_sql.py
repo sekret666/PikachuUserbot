@@ -5,7 +5,7 @@
 # Made by @ItzSjDude for Pikabot
 
 try:
-    from . import SESSION, BASE
+    from pikabot.sql_helper import SESSION, BASE
 except ImportError:
     raise AttributeError
 from sqlalchemy import Column, UnicodeText, Numeric, String
