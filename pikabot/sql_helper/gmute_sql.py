@@ -21,7 +21,6 @@ class GMute(BASE):
 
 GMute.__table__.create(checkfirst=True)
 
-SESSION.query(Notes).filter(Notes.chat_id
 def is_gmuted(sender_id, pika_id):
     try:
         return SESSION.query(GMute).filter(GMute.sender_id==str(sender_id), Gmute.pika_id==pika_id).all()
