@@ -11,7 +11,6 @@ except ImportError:
 
 from sqlalchemy import Column, String, UnicodeText
 
-
 class GMute(BASE):
     __tablename__ = "gmute"
     sender = Column(String(14), primary_key=True)
@@ -19,9 +18,15 @@ class GMute(BASE):
     def __init__(self, sender):
         self.sender = str(sender)
 
+class GMute2(BASE):
+    __tablename__ = "gmute2"
+    sender = Column(String(14), primary_key=True)
+
+    def __init__(self, sender):
+        self.sender = str(sender)
 
 GMute.__table__.create(checkfirst=True)
-
+GMute2.__table__.create(checkfirst=True)
 
 def is_gmuted(sender_id):
     try:
@@ -43,17 +48,6 @@ def ungmute(sender):
     if rem:
         SESSION.delete(rem)
         SESSION.commit()
-
-class GMute2(BASE):
-    __tablename__ = "gmute2"
-    sender = Column(String(14), primary_key=True)
-
-    def __init__(self, sender):
-        self.sender = str(sender)
-
-
-GMute2.__table__.create(checkfirst=True)
-
 
 def is_gmuted2(sender_id):
     try:
