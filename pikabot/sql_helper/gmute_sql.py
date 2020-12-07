@@ -20,11 +20,11 @@ class GMute(BASE):
         self.pika_id = pika_id 
 
 GMute.__table__.create(checkfirst=True)
-
-def is_gmuted(sender_id, pika_id):
+       
+def is_gmuted(sender_id):
     try:
-        return SESSION.query(GMute).filter(GMute.sender_id==str(sender_id), Gmute.pika_id==pika_id).all()
-    except:
+        return SESSION.query(GMute).all()
+    except: 
         return None
     finally:
         SESSION.close()
