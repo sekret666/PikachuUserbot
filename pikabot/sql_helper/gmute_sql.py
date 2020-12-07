@@ -9,63 +9,37 @@ try:
 except ImportError:
     raise Exception("Hello!")
 
-from sqlalchemy import Column, String, UnicodeText
+from sqlalchemy import *
 
 class GMute(BASE):
     __tablename__ = "gmute"
     sender = Column(String(14), primary_key=True)
-
-    def __init__(self, sender):
+    pika_id = Column(Numeric, primary_key=True)
+    def __init__(self, sender, pika_id):
         self.sender = str(sender)
-
-class GMute2(BASE):
-    __tablename__ = "gmute2"
-    sender = Column(String(14), primary_key=True)
-
-    def __init__(self, sender):
-        self.sender = str(sender)
+        self.pika_id = pika_id 
 
 GMute.__table__.create(checkfirst=True)
-GMute2.__table__.create(checkfirst=True)
 
-def is_gmuted(sender_id):
+SESSION.query(Notes).filter(Notes.chat_id
+def is_gmuted(sender_id, pika_id):
     try:
-        return SESSION.query(GMute).all()
+        return SESSION.query(GMute).filter(GMute.sender_id==str(sender_id), Gmute.pika_id==pika_id).all()
     except:
         return None
     finally:
         SESSION.close()
 
 
-def gmute(sender):
-    adder = GMute(str(sender))
+def gmute(sender, pika_id):
+    adder = GMute(str(sender), pika_id)
     SESSION.add(adder)
     SESSION.commit()
 
 
-def ungmute(sender):
-    rem = SESSION.query(GMute).get((str(sender)))
+def ungmute(sender, pika_id):
+    rem = SESSION.query(GMute).get((str(sender), pika_id))
     if rem:
         SESSION.delete(rem)
         SESSION.commit()
 
-def is_gmuted2(sender_id):
-    try:
-        return SESSION.query(GMute2).all()
-    except:
-        return None
-    finally:
-        SESSION.close()
-
-
-def gmute2(sender):
-    adder = GMute2(str(sender))
-    SESSION.add(adder)
-    SESSION.commit()
-
-
-def ungmute2(sender):
-    rem = SESSION.query(GMute2).get((str(sender)))
-    if rem:
-        SESSION.delete(rem)
-        SESSION.commit()
