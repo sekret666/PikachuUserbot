@@ -44,7 +44,7 @@ def get_all_approved(pika_id):
 
 def is_approved(chat_id, pika_id):
     try:
-        return SESSION.query(PMPermit).filter(PMPermit.chat_id == str(chat_id), PMPermit.pika_id=pika_id).one()
+        return SESSION.query(PMPermit).filter(PMPermit.chat_id == str(chat_id), PMPermit.pika_id == pika_id).one()
     except:
         return None
     finally:
