@@ -73,3 +73,7 @@ async def is_pikatg(_pika_=None):
            return True
      else:
            return False
+
+async def get_pika_id(_pika):
+           _pika_= await _pika.client.get_me() 
+           return _pika_.id 
