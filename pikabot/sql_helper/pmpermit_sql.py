@@ -18,7 +18,7 @@ class PMPermit(BASE):
     chat_id = Column(String(14), primary_key=True)
     reason = Column(String(127))
     pika_id = Column(Numeric, primary_key=True)
-    def __init__(self, chat_id, reason="", pika_id):
+    def __init__(self, chat_id, pika_id, reason=""):
         self.chat_id = chat_id
         self.reason = reason
         self.pika_id = pika_id
