@@ -62,18 +62,26 @@ def pikatgbot(pika=None, silent=None):
     return decorator
 
 async def pika_msg(self, text, _pika_=None):
-     if _pika_ is None:
-         return await self.edit(text)
-     else:
-         return await self.reply(text)
+  if _pika_ is None:
+      return await self.edit(text)
+  else:
+      return await self.reply(text)
 
 async def is_pikatg(_pika_=None):
-     _pika = await _pika_.client.get_me()
-     if _pika.id== tgbot.uid:
-           return True
-     else:
-           return False
+  _pika = await _pika_.client.get_me()
+  if _pika.id== tgbot.uid:
+      return True
+  else:
+      return False
 
 async def get_pika_id(_pika):
-           _pika_= await _pika.client.get_me() 
-           return _pika_.id 
+  _pika_= await _pika.client.get_me() 
+  return _pika_.id 
+
+async def get_pika_tg(_pika_): 
+  _tg = await _pika_.client.get_me()
+  if _tg.id == tgbot.uid:
+      return True
+  else:
+      return None
+ 
