@@ -13,7 +13,7 @@ import os; import sys; from telethon.sessions import StringSession; from teletho
 print('Optimized Plugins')
 
 #Global Variables
-CMD_LIST = {};CMD_HELP = {};Pika_Cmd = {};INT_PLUG = "";LOAD_PLUG = {};COUNT_MSG = 0;USERS = {};COUNT_PM = {};LASTMSG = {};ISAFK = False;AFKREASON = None
+CMD_LIST = {};PikaAsst = {};CMD_HELP = {};Pika_Cmd = {};INT_PLUG = "";LOAD_PLUG = {};COUNT_MSG = 0;USERS = {};COUNT_PM = {};LASTMSG = {};ISAFK = False;AFKREASON = None
 pikalog = getLogger(__name__)
 ENV = os.environ.get("ENV", False)
 if bool(ENV):
