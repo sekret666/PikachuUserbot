@@ -66,7 +66,7 @@ if bool(ENV):
 else:    
     pass
 
-bot= bot2 = bot3 = bot4 = None
+bot= bot2 = bot3 = bot4 = tgbot =  None
 BF_BOT=Var.TG_BOT_TOKEN_BF_HER
 BF_BOTNAME=Var.TG_BOT_USER_NAME_BF_HER
 try:
