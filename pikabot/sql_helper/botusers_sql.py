@@ -32,14 +32,14 @@ def add_user(pika_id: int):
 
 
 def is_user_exist(pika_id):
-    pika = SESSION.query(BotUsers).filter(BotUsers.pika_id == str(pika_id)).one()
-    if pika:
-        try: 
-          return True   
-        except:
-          return None
-        finally:
-          SESSION.close()
+    try:
+       pika = SESSION.query(BotUsers).filter(BotUsers.pika_id == str(pika_id)).one()
+       if pika:  
+           return True   
+    except:
+       return None
+    finally:
+       SESSION.close()
 
 def get_added_users():
     pika = SESSION.query(BotUsers).all()
