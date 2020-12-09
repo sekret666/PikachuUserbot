@@ -19,6 +19,7 @@ if bot is None:
     _Pika_Loop_.run_until_complete(pika_login("STRING_SESSION"))
 else:
     l= Var.CUSTOM_CMD
+    from pikabot import tgbot 
     from pikabot.login import pika_login
     async def connecting_clients():
         import glob;path = './plugins/*.py';files = glob.glob(path)
