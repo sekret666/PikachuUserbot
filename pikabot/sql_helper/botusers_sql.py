@@ -16,7 +16,7 @@ from . import BASE, SESSION
 
 class BotUsers(BASE):
     __tablename__ = "botusers"
-    chat_id = Column(String(14), primary_key=True)
+    pika_id = Column(String(14), primary_key=True)
 
     def __init__(self, pika_id):
         self.pika_id = pika_id
@@ -31,7 +31,7 @@ def add_user(pika_id: int):
     SESSION.commit()
 
 
-def is_user_exist(chat_id):
+def is_user_exist(pika_id):
     pika = SESSION.query(BotUsers).filter(BotUsers.pika_id == str(pika_id)).one()
     if pika:
         try: 
