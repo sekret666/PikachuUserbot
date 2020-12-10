@@ -116,7 +116,7 @@ def pika_assistant(_pikasst):
        if not _pikasst.startswith("__"):
            userbot = pikabot; asst.bot = bot; asst.tgbot = tgbot; asst.Var = Var; asst.rx = rx; asst.ItzSjDude = ItzSjDude
            spec.loader.exec_module(asst)
-           PikaAsst[_pikasst] = asst; modules["pikabot"+_pikasst] = asst; logpl.info("🔥Imported "+_pikasst)
+           PikaAsst[_pikasst] = asst; modules["pikabot"+_pikasst] = asst; logpa.info("🔥Imported "+_pikasst)
        else:
           pass 
     else: 
