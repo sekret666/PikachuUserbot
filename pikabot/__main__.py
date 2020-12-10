@@ -22,7 +22,7 @@ else:
     from pikabot import tgbot 
     from pikabot.login import pika_login
     async def connecting_clients():
-        import glob;path = './plugins/*.py';_path='pikabot.Assistant.plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
+        import glob;path = './plugins/*.py';_path='./pikabot/Assistant/plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
         if bot: 
             try: 
                  await bot.start()
@@ -105,8 +105,8 @@ else:
 
         for name in _files:
             with open(name) as f:
-                _asstpath = Path(f.name);_pikasst = _asstpath.stem
-                pika_assistant(_pikasst.replace(".py", ""))
+                _asstpath = Path(f.name);shortname = _asstpath.stem
+                pika_assistant(shortname.replace(".py", ""))
 
         import pikabot._core
 
