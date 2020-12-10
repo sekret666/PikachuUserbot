@@ -98,7 +98,7 @@ def add_chat(_pika_):
     return
  
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
-def pika_assistant(_pikasst):
+def pika_assistant(_pikasst=shortname):
     if ACTIVATE_ASSISTANT:
                                     #____Imports____
        import sys           
@@ -109,7 +109,7 @@ def pika_assistant(_pikasst):
        import plugins.__init__ as Modules
        logpa.info('✨STARTING PIKA ASSISTANT✨')
                                     #____Paths/Spec_____
-       asstpath = _asstpath(f"pikabot/Assistant/plugins/{_pikasst}.py")
+       asstpath = _asstpath(f"./pikabot/Assistant/plugins/{_pikasst}.py")
        asstname = "pikabot.Assistant.plugins.{}".format(_pikasst)
        spec = spec_from_file_location(asstname, asstpath)
        asst = module_from_spec(spec)
