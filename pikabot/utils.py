@@ -98,7 +98,7 @@ def add_chat(_pika_):
     return
  
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
-def pika_assistant(_pikasst=shortname):
+def pika_assistant(_pikasst=None):
     if ACTIVATE_ASSISTANT:
                                     #____Imports____
        import sys           
