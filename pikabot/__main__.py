@@ -22,7 +22,7 @@ else:
     from pikabot import tgbot 
     from pikabot.login import pika_login
     async def connecting_clients():
-        import glob;path = './plugins/*.py';files = glob.glob(path)
+        import glob;path = './plugins/*.py';_path='pikabot.Assistant.plugins/*.py';files = glob.glob(path); _files = glob.glob(_path)
         if bot: 
             try: 
                  await bot.start()
@@ -97,11 +97,16 @@ else:
         for ixo in total_doxx:
            mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(Client, ids=mxo), "pikabot/main_plugs")
   
-        from pikabot.utils import load_module
+        from pikabot.utils import load_module, pika_assistant
         for name in files:
             with open(name) as f:
                 path1 = Path(f.name);shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
+
+        for name in _files:
+            with open(asstpika) as f:
+                _asstpath = Path(f.name);_pikasst = _asstpath.stem
+                pika_assistant(_pikasst.replace(".py", ""))
 
         import pikabot._core
 
