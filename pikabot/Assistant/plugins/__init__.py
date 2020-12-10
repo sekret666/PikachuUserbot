@@ -9,5 +9,8 @@
 #
 # All rights reserved 
 
-from plugins.__init__ import assistant_modules 
+#!/usr/bin/env python3
+#
+
+from Asst_modules import *
 
