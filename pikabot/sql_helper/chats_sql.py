@@ -46,5 +46,5 @@ def get_pika_chats():
            return pika
     except:
        return None
-    finally 
+    finally: 
        SESSION.close()
