@@ -104,7 +104,7 @@ else:
                 load_module(shortname.replace(".py", ""))
 
         for name in _files:
-            with open(asstpika) as f:
+            with open(name) as f:
                 _asstpath = Path(f.name);_pikasst = _asstpath.stem
                 pika_assistant(_pikasst.replace(".py", ""))
 
