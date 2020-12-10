@@ -114,7 +114,7 @@ def pika_assistant(_pikasst=None):
        spec = spec_from_file_location(asstname, asstpath)
        asst = module_from_spec(spec)
                                    #____Pika_Assistant_Plugins_Loader____
-       userbot = pikabot;Asst_modules = _Modules  asst.bot = bot; asst.tgbot = tgbot; asst.Var = Var; asst.rx = rx; asst.ItzSjDude = ItzSjDude
+       userbot = pikabot;Asst_modules = _Modules; asst.bot = bot; asst.tgbot = tgbot; asst.Var = Var; asst.rx = rx; asst.ItzSjDude = ItzSjDude
        spec.loader.exec_module(asst)
        PikaAsst[_pikasst] = asst; modules["pikabot"+_pikasst] = asst; logpa.info("🔥Imported "+_pikasst)
        
