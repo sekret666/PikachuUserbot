@@ -100,7 +100,7 @@ def add_chat(_pika_):
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 def pika_assistant(_pikasst):
     if ACTIVATE_ASSISTENT:
-          #____Imports____
+                                    #____Imports____
        import sys           
        import pikabot.utils
        from sys import modules
