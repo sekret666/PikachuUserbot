@@ -9,5 +9,5 @@
 #
 # All rights reserved 
 
-from plugins.__init__ import * 
+from Asst_modules import *
 from ..utils import *
