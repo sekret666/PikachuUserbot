@@ -24,6 +24,7 @@ if bool(ENV):
         pikalog.error("INVALID ID DETECED: Make sure Your I'd starts with -100")
     BOTLOG = sb(os.environ.get("BOTLOG", "False"))
     LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
+    ACTIVATE_ASSISTANT = os.environ.get("ACTIVATE_ASSISTANT", "False)
     AUTOPIC_COMMENT = os.environ.get("AUTOPIC_COMMENT", "")
     AUTOPIC_FONT_COLOUR = os.environ.get("AUTOPIC_FONT_COLOUR", "")
     AUTOPIC_FONT = os.environ.get("AUTOPIC_FONT", "") 
