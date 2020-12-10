@@ -13,7 +13,9 @@ import os
 from functools import wraps
 TGBOT_USERS = set(int(x) for x in os.environ.get("BOT_USERS", "779890498").split())
 from pikabot.main_plugs.utils import *
+from pikabot.sql_helper.chats_sql import *
 
+#©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 def pikatgbot(pika=None, silent=None):
     def decorator(func):
         @wraps(func)
@@ -61,27 +63,36 @@ def pikatgbot(pika=None, silent=None):
 
     return decorator
 
+#©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 async def pika_msg(self, text, _pika_=None):
   if _pika_ is None:
       return await self.edit(text)
   else:
       return await self.reply(text)
-
+#©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/> 
 async def is_pikatg(_pika_=None):
   _pika = await _pika_.client.get_me()
   if _pika.id== tgbot.uid:
       return True
   else:
       return False
-
+#©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 async def get_pika_id(_pika):
   _pika_= await _pika.client.get_me() 
   return _pika_.id 
-
+#©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 async def get_pika_tg(_pika_): 
   _tg = await _pika_.client.get_me()
   if _tg.id == tgbot.uid:
       return True
   else:
       return None
- 
+#©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
+def add_chat(_pika_):
+  if not _pika_.is_private:
+    if not is_pika_exist(_pika_): 
+      add_pika(_pika_.chat_id)
+      return "Added" 
+  else:
+    return 
+#©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
