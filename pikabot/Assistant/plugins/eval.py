@@ -10,7 +10,7 @@
 # All rights reserved 
 
 from . import _eval
-from ..utils import pikatgbot
+from pikabot.utils import pikatgbot
 
 @ItzSjDude(pika=True, pattern="eval")
 @pikatgbot('Owner')
