@@ -95,5 +95,30 @@ def add_chat(_pika_):
         add_pika(_pika_.chat_id)
         return "Added" 
   else:
-    return 
+    return
+ 
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
+def pika_assistant(_pikasst):
+    if ACTIVATE_ASSISTENT:
+          #____Imports____
+       import sys           
+       import pikabot.utils
+       from sys import modules
+       from __main__ import l as rx
+       from importlib.utis import *
+       from pathlib import Path as _asstpath
+       logit.info('✨STARTING PIKA ASSISTANT✨')
+                                    #____Paths/Spec_____
+       asstpath = _asstpath(f"pikabot/Assistant/plugins/{_pikasst}.py")
+       asstname = "pikabot.Assistant.plugins.{}".format(_pikasst)
+       spec = spec_from_file_location(asstname, asstpath)
+       asst = module_from_spec(spec)
+                                   #____Pika_Assistant_Plugins_Loader____
+       if not _pikasst.startswith("__"):
+           userbot = pikabot; asst.bot = bot; asst.tgbot = tgbot; asst.Var = Var; asst.rx = rx; asst.ItzSjDude = ItzSjDude
+           spec.loader.exec_module(asst)
+           PikaAsst[_pikasst] = asst; modules["pikabot"+_pikasst] = asst; logpl.info("🔥Imported "+_pikasst)
+       else:
+          pass 
+    else: 
+       return 
