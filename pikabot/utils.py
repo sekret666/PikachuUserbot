@@ -99,13 +99,14 @@ def add_chat(_pika_):
  
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 def pika_assistant(_pikasst):
-    if ACTIVATE_ASSISTENT:
+    if ACTIVATE_ASSISTANT:
                                     #____Imports____
        import sys           
        import pikabot.utils
        from sys import modules
        from __main__ import l as rx
        from pathlib import Path as _asstpath
+       import plugins.__init__ as Modules
        logpa.info('✨STARTING PIKA ASSISTANT✨')
                                     #____Paths/Spec_____
        asstpath = _asstpath(f"pikabot/Assistant/plugins/{_pikasst}.py")
@@ -114,9 +115,9 @@ def pika_assistant(_pikasst):
        asst = module_from_spec(spec)
                                    #____Pika_Assistant_Plugins_Loader____
        if not _pikasst.startswith("__"):
-           userbot = pikabot; asst.bot = bot; asst.tgbot = tgbot; asst.Var = Var; asst.rx = rx; asst.ItzSjDude = ItzSjDude
+           userbot = pikabot; asst.bot = bot; asst.tgbot = tgbot; asst.Var = Var; asst.rx = rx; asst.ItzSjDude = ItzSjDude;
            spec.loader.exec_module(asst)
-           PikaAsst[_pikasst] = asst; modules["pikabot"+_pikasst] = asst; logpa.info("🔥Imported "+_pikasst)
+           PikaAsst[_pikasst] = asst; modules['Asst_modules'] = Assistant_Modules; modules["pikabot"+_pikasst] = asst; logpa.info("🔥Imported "+_pikasst)
        else:
           pass 
     else: 
