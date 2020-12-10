@@ -8,3 +8,10 @@
 # Please see < https://github.com/ItzSjDude/PikachuUserbot/blob/master/LICENSE >
 #
 # All rights reserved 
+
+from plugins.__init__ import * 
+from ..utils import *
+
+
+
+
