@@ -11,7 +11,7 @@
 
 from . import _eval, pikatgbot
 
-@ItzSjDude(pika=True, pattern="eval)
+@ItzSjDude(pika=True, pattern="eval")
 @pikatgbot('Owner')
 async def _(event):
   await _eval(event)
