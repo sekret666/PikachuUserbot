@@ -89,10 +89,11 @@ async def get_pika_tg(_pika_):
       return None
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
 def add_chat(_pika_):
-  if not _pika_.is_private:
-    if not is_pika_exist(_pika_): 
-      add_pika(_pika_.chat_id)
-      return "Added" 
+  if _pika_.client == tgbot:
+    if not _pika_.is_private:
+      if not is_pika_exist(_pika_): 
+        add_pika(_pika_.chat_id)
+        return "Added" 
   else:
     return 
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
