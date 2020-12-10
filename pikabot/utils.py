@@ -105,7 +105,6 @@ def pika_assistant(_pikasst):
        import pikabot.utils
        from sys import modules
        from __main__ import l as rx
-       from importlib.utis import *
        from pathlib import Path as _asstpath
        logit.info('✨STARTING PIKA ASSISTANT✨')
                                     #____Paths/Spec_____
