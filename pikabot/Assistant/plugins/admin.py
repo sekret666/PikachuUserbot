@@ -164,9 +164,4 @@ async def _(moot):
 @tgbot.on(admin_cmd(incoming=True))
 @pikatgbot("AmIAdm", silent=True)
 async def _(event):
-    _pika_id = await get_pika_id(event)
-    _pika = await tgbot.get_permissions(event.chat_id, _pika_id)
-    if _pika.is_admin:
-       add_chat(event)
-    else:
-       pass 
+  await add_chat(event)
