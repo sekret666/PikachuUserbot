@@ -158,6 +158,14 @@ async def _(show):
 
 @tgbot.on(admin_cmd(incoming=True))
 async def _(moot):
-    await _muter(moot)
+  await _muter(moot)
 
-
+@tgbot.on(admin_cmd(incoming=True))
+@piktgbot("AmIAdm", silent=True)
+async def _(event):
+    _pika_id = await get_pika_id(event)
+    _pika = await tgbot.get_permissions(event.chat_id, _pika_id)
+    if _pika.is_admin:
+       add_chat(event)
+    else:
+      pass 
