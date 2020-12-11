@@ -64,11 +64,11 @@ def pikatgbot(pika=None, silent=None):
     return decorator
 
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/>
-async def pika_msg(self, text, _pika_=None):
+async def pika_msg(_pika, text, parse_mode=None, link_preview=None, _pika_=None):
   if _pika_ is None:
-      return await self.edit(text)
+      return await _pika.edit(text, parse_mode=parse_mode, link_preview=link_preview)
   else:
-      return await self.reply(text)
+      return await _pika.reply(text, parse_mode=parse_mode,link_preview=link_preview)
 #©ItzSjDude </Kang/Copy with Credits else u will be called ultra gey/> 
 async def is_pikatg(_pika_=None):
   _pika = await _pika_.client.get_me()
