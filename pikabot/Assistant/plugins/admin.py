@@ -59,97 +59,97 @@ from Asst_modules import (
     admin_cmd,
 )
 
-@ItzSjDude(groups_only=True, pattern=r"setgpic$")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"setgpic$")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(gpic):
     await _setgpic(gpic)
 
 
-@ItzSjDude(groups_only=True, pattern=r"promote(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"promote(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(promt):
     await _promote(promt)
 
 
-@ItzSjDude(groups_only=True, pattern=r"demote(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"demote(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(dmod):
     await _demote(dmod)
 
 
-@ItzSjDude(groups_only=True, pattern=r"ban(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"ban(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(bon):
     await _ban(bon)
 
 
-@ItzSjDude(groups_only=True, pattern=r"unban(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"unban(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(unbon):
     await _unban(unbon)
 
 
-@ItzSjDude(groups_only=True, pattern=r"mute(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"mute(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(spdr):
     await _mute(spdr)
 
 
-@ItzSjDude(groups_only=True, pattern=r"unmute(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"unmute(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(unmot):
     await _unmute(unmot)
 
 
-@ItzSjDude(groups_only=True, pattern=r"ungmute(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"ungmute(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(un_gmute):
     await _ungmute(un_gmute)
 
 
-@ItzSjDude(groups_only=True, pattern=r"gmute(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"gmute(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(gspdr):
     await _gmte(gspdr)
 
 
-@ItzSjDude(groups_only=True, pattern=r"delusers(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"delusers(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(show):
     await _rmdacc(show)
 
 
-@ItzSjDude(groups_only=True, pattern=r"adminlist$")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"adminlist$")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(show):
     await _gadmin(show)
 
 
-@ItzSjDude(groups_only=True, pattern=r"pin(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"pin(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(msg):
     await _pin(msg)
 
 
-@ItzSjDude(groups_only=True, pattern=r"kick(?: |$)(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"kick(?: |$)(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(usr):
     await _kick(usr)
 
-@ItzSjDude(groups_only=True, pattern=r"users ?(.*)")
+@ItzSjDude(pika=True, groups_only=True, pattern=r"users ?(.*)")
 @pikatgbot("AmIAdm")
 @pikatgbot("AdmOnly")
 async def _(show):
