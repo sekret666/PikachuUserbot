@@ -57,6 +57,7 @@ from Asst_modules import (
     _ungmute,
     _unmute,
     admin_cmd,
+    add_chat,
 )
 
 @ItzSjDude(pika=True, groups_only=True, pattern=r"setgpic$")
