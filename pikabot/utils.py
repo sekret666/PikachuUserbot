@@ -42,7 +42,7 @@ def pikatgbot(pika=None, silent=None):
 
             if "OwnSudo" in pika:
                 tgbotusers = list(TGBOT_USERS)
-                if event.sender_id == bot.uid or event.sender_id == tgbotusers:
+                if event.sender_id == bot.uid or event.sender_id in tgbotusers:
                     await func(event)
                 else:
                     if silent is None:
@@ -56,9 +56,9 @@ def pikatgbot(pika=None, silent=None):
                         await event.reply("Only Owners can execute this Cmd")
 
             if "BotSudo" in pika:
-                if event.sender_id == list(TGBOT_USERS):
+                if event.sender_id in list(TGBOT_USERS):
                     await func(event)
-
+     
         return wrapper
 
     return decorator
