@@ -25,6 +25,7 @@ ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 apt-get update && apt upgrade -y 
 apt-get install -y --no-install-recommends \
+    apt install kali-grant-root \ 
     coreutils \
     bash \
     nodejs \
@@ -69,7 +70,7 @@ apt-get install -y --no-install-recommends \
     policykit-1\
     unzip
 apt autoremove --yes
-
+dpkg-reconfigure kali-grant-root
 pip3 install --upgrade pip setuptools 
 git clone https://github.com/ItzSjDude/PikachuUserbot ./
 mkdir bin && mkdir pikabot/main_plugs
