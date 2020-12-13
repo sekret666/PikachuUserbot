@@ -10,6 +10,6 @@
 
 FROM kalilinux/kali:latest
 COPY pika.sh /tmp/pika.sh
-RUN apt install -y kali-grant-root && sudo dpkg-reconfigure kali-grant-root
+RUN apt install kali-grant-root -y && sudo dpkg-reconfigure kali-grant-root
 WORKDIR root/itzsjdude
 RUN /tmp/pika.sh && chmod +x /usr/local/bin/* 
