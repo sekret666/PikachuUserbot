@@ -10,8 +10,6 @@
 
 FROM kalilinux/kali:latest
 COPY pika.sh /tmp/pika.sh
-RUN sed -e 's;^# \(%wheel.*NOPASSWD.*\);\1;g' -i /etc/sudoers
-RUN rm /var/cache/apt/archives/lock && rm /var/lib/dpkg/lock* && apt-get update && apt-get install sudo -y && useradd -rm -d /home/itzsjdude -s /bin/bash -g root -G sudo -u 1001 itzsjdude
-USER itzsjdude
-WORKDIR /home/itzsjdude
+RUN apt install -y kali-grant-root && sudo dpkg-reconfigure kali-grant-root
+WORKDIR root/itzsjdude
 RUN /tmp/pika.sh && chmod +x /usr/local/bin/* 
