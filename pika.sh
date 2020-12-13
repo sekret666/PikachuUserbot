@@ -25,7 +25,7 @@ ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 apt-get update && apt upgrade -y 
 apt-get install -y --no-install-recommends \
-    apt install kali-grant-root \ 
+    kali-grant-root \ 
     coreutils \
     bash \
     nodejs \
